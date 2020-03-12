@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula02 - jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- 
+    <script>
+        var status = -1;
+        $(document).ready( 
+            function(){
+                $("#btnAbrir").click( function(){
+                    $("#painel").slideToggle();
+                    if( status == -1){
+                        $("#btnAbrir").text("Fechar");
+                    }else{
+                        $("#btnAbrir").text("Abrir");
+                    }
+                    status *= -1;
+                });
+
+        });
+    </script>
+
+    <style>
+        #painel{
+            display: none;
+            padding: 100px;
+            background: #ccc;
+        }
+    </style>
+
+    <button id="btnAbrir">Abrir</button>  <br>
+
+    <div id="painel">slideDown()</div>
+
+    <hr>
+
+
+    <button id="btnAnimar">Animar</button>
+    <div id="animada"></div>
+    <style>
+        #animada{
+            width: 100px; height: 100px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(document).ready( function(){
+            $("#btnAnimar").click( function(){
+                $("#animada").animate({left: "250px", top:"300px"});
+            });
+        });
+    </script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+-->
+
+
+<button id="btnExercicio">Animar Exercicio</button>
+    <div id="exercicio"></div>
+    <style>
+        #exercicio{
+            width: 100px; height: 100px;
+            background: blue;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+        }
+    </style>
+    <script>
+        var horizontal = -1;
+        var vertical = -1;
+        $(document).ready( function(){
+            $("#btnExercicio").click( function(){
+                
+                if( horizontal == -1 && vertical == -1 ){
+                    $("#exercicio").animate({left: "250px", top:"50px"});
+                    horizontal *=-1;
+
+                }else if( horizontal == 1 && vertical == -1 ){
+                    $("#exercicio").animate({left: "250px", top:"300px"});
+                    vertical *=-1;
+                }else if( horizontal == 1 && vertical == 1 ){
+                    $("#exercicio").animate({left: "0px", top:"300px"});
+                    horizontal *=-1;
+                }else if( horizontal == -1 && vertical == 1 ){
+                    $("#exercicio").animate({left: "0px", top:"50px"});
+                    vertical *=-1;
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
